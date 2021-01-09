@@ -2,7 +2,11 @@ import React from "react";
 import { HeaderNav, Logo, Menu } from "../../styles/components/HeaderStyles";
 import { Container, Flex } from "../../styles/components/GlobalStyles";
 
-const Header: React.FC = () => {
+type HeaderProps = {
+    onToggleMenu: React.MouseEventHandler;
+};
+
+const Header: React.FC<HeaderProps> = ({ onToggleMenu }) => {
     return (
         <HeaderNav
             animate={{ y: 0, opacity: 1 }}
@@ -17,7 +21,7 @@ const Header: React.FC = () => {
                         <a href="/">SRBUK.</a>
                     </Logo>
                     <Menu>
-                        <button>
+                        <button onClick={onToggleMenu}>
                             <span />
                             <span />
                         </button>
