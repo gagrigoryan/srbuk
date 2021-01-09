@@ -1,0 +1,19 @@
+@import "./vars";
+
+.container {
+    width: $desktopContainerWidth;
+    padding: 0;
+    margin: 0 auto;
+
+    @include tabletLargeMedia {
+        width: $tabletLargeContainerWidth;
+    }
+
+    @include tabletMedia {
+        width: $tabletContainerWidth;
+    }
+
+    @include phoneMedia {
+        width: $phoneContainerWidth;
+    }
+}
