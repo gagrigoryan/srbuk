@@ -3,5 +3,11 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  position: relative;
+}
+
+.featuredWrapper {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
 }
