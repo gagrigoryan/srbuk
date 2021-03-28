@@ -11,6 +11,7 @@ import { Container } from "../../styles/components/GlobalStyles";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import styles from "./homeFeatured.module.scss";
+import secondVideo from "../../assets/second.mp4";
 
 const HomeFeatured: React.FC = () => {
     const [hovered, setHovered] = useState<boolean>(false);
@@ -43,12 +44,7 @@ const HomeFeatured: React.FC = () => {
                 <a href="/">
                     <FeaturedVideo>
                         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-                        <video
-                            loop
-                            autoPlay
-                            muted
-                            src="https://storage.coverr.co/videos/8AUaT33om9l2g55DMLrQMZA3kJwceUDz?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjEwNDk2MDczfQ.LVjDQgEGYyydk4SQ7z7VNYU4GJkdVhAvtJSWYmAYk9o"
-                        />
+                        <video loop autoPlay muted src={secondVideo} />
                     </FeaturedVideo>
                     <FeaturedContent onHoverStart={() => setHovered(!hovered)} onHoverEnd={() => setHovered(!hovered)}>
                         <div className={styles.wrapper}>
@@ -62,8 +58,9 @@ const HomeFeatured: React.FC = () => {
                             </motion.div>
                         </div>
                         <h2 className="featured-title">
-                            NOT <br />
-                            HUMBLE
+                            BE
+                            <br />
+                            CREATIVE
                             <span className="arrow">
                                 <motion.svg
                                     animate={{ x: hovered ? 48 : 0 }}

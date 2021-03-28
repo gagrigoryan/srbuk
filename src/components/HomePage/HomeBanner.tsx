@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { Banner, Video, Canvas, BannerTitle, Headline } from "../../styles/components/HomeStyles";
 import useWindowSize from "../../hooks/useWindowsSize";
+import videoPath from "../../assets/main.mp4";
 
 const HomeBanner: React.FC = () => {
     const size = useWindowSize();
     const canvas = useRef<HTMLCanvasElement>(null);
     const video = useRef<HTMLVideoElement>(null);
-    const videoPath =
-        "https://storage.coverr.co/videos/wBF1TwTsaS252Hge5IRR021oA00ggH1c00J?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjEwMTIxOTMyfQ.bUPi-L66iBt7hmrHiojL2xbAoc3anYJRqji84oT_gq8";
+    // const videoPath = "./src/assets/main.mp4";
 
     useEffect(() => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
